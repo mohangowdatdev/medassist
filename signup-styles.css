@@ -1,0 +1,279 @@
+/* signup-styles.css */
+:root {
+    --primary-color: #2b6cb0;
+    --primary-dark: #1e4e8c;
+    --secondary-color: #e2e8f0;
+    --background-color: #f7fafc;
+    --text-color: #2d3748;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-section a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-image {
+    width: 40px;
+    height: auto;
+}
+
+.logo-section h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.signup-content {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.signup-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.signup-card h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #718096;
+    margin-bottom: 30px;
+}
+
+
+
+.form-group {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* New password field styles */
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 40px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #718096;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle:hover {
+    color: var(--primary-color);
+}
+
+.password-toggle:focus {
+    outline: none;
+    color: var(--primary-color);
+}
+
+.password-hint {
+    font-size: 0.85rem;
+    color: #718096;
+    margin-top: 5px;
+}
+
+.form-options {
+    margin-bottom: 20px;
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.terms-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.login-prompt {
+    text-align: center;
+    margin-top: 20px;
+    color: #718096;
+}
+
+.login-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.features-sidebar {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.features-sidebar h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-text h4 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.feature-text p {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+    .signup-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features-sidebar {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .signup-card,
+    .features-sidebar {
+        margin: 20px;
+        padding: 30px;
+    }
+}

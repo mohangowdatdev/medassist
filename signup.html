@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAssist AI - Sign Up</title>
+    <link rel="icon" href="fevicon.png" sizes="48x48" type="image/x-icon">
+    <link rel="stylesheet" href="signup-styles.css">
+    <link rel="stylesheet" href="transitions.css">
+</head>
+
+<body>
+    <div class="container fade-in">
+        <nav class="navbar slide-down">
+            <div class="logo-section">
+                <a href="index.html">
+                    <img src="fevicon.png" alt="MedAssist Logo" class="logo-image">
+                    <h1>MedAssist AI</h1>
+                </a>
+            </div>
+        </nav>
+
+        <main class="signup-content">
+            <div class="signup-card slide-in-left">
+                <h2>Create Account</h2>
+                <p class="subtitle">Join MedAssist AI for personalized healthcare assistance</p>
+
+                <form class="signup-form" action="login page.html">
+                    <div class="form-group fade-in-up" style="--delay: 0.2s">
+                        <label for="Name">Name</label>
+                        <input type="text" id="Name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group fade-in-up" style="--delay: 0.4s">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group fade-in-up" style="--delay: 0.6s">
+                        <label for="password">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="password" placeholder="Create a password" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="password-hint">Must be at least 8 characters long with numbers and symbols</p>
+                    </div>
+
+                    <div class="form-group fade-in-up" style="--delay: 0.8s">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="password-field">
+                            <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-options fade-in-up" style="--delay: 1s">
+                        <label class="terms-checkbox">
+                            <input type="checkbox" id="terms" required>
+                            I agree to the <a href="terms.html" class="terms-link">Terms of Service
+                            </a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="signup-button fade-in-up" style="--delay: 1.2s">Create Account</button>
+                </form>
+
+                <p class="login-prompt fade-in-up" style="--delay: 1.4s">
+                    Already have an account? <a href="login page.html" class="login-link">Login</a>
+                </p>
+            </div>
+
+            <div class="features-sidebar slide-in-right">
+                <h3>Why Choose MedAssist AI?</h3>
+                <ul class="features-list">
+                    <li class="fade-in-up" style="--delay: 0.4s">
+                        <span class="feature-icon">🔒</span>
+                        <div class="feature-text">
+                            <h4>Secure & Private</h4>
+                            <p>Your health data is encrypted and protected</p>
+                        </div>
+                    </li>
+                    <li class="fade-in-up" style="--delay: 0.6s">
+                        <span class="feature-icon">🤖</span>
+                        <div class="feature-text">
+                            <h4>AI-Powered Assistance</h4>
+                            <p>24/7 access to medical information</p>
+                        </div>
+                    </li>
+                    <li class="fade-in-up" style="--delay: 0.8s">
+                        <span class="feature-icon">📊</span>
+                        <div class="feature-text">
+                            <h4>Smart Analysis</h4>
+                            <p>Understand your medical reports easily</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const button = input.nextElementSibling;
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+
+            const svg = button.querySelector('svg');
+            if (type === 'password') {
+                svg.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>';
+            } else {
+                svg.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>';
+            }
+        }
+    </script>
+</body>
+
+</html>

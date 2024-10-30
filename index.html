@@ -1,0 +1,68 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assistant</title>
+    <link rel="icon" href="fevicon.png" sizes="48x48" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="fevicon.png" alt="MedAssist Logo" class="logo-image">
+                </div>
+                <h1>MedAssist AI</h1>
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">U</div>
+                <span class="username">Patient</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h2 class="welcome-message">How may I assist you with your health today?</h2>
+
+            <div class="disclaimer">
+                Note: This is an AI assistant for general information only.
+                For emergencies, please call emergency services or visit your nearest hospital.
+            </div>
+
+            <div class="input-container">
+                <input type="text" class="message-input"
+                    placeholder="Describe your symptoms or ask a medical question...">
+                <label for="imageUpload" class="action-button upload-btn">
+                    📎
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none">
+                </label>
+            </div>
+
+            <img id="imagePreview">
+
+            <div class="actions">
+                <button class="action-button" data-action="summarize" id = "ocrbut">
+                    📋 Analyze Medical Report
+                </button>
+                <button class="action-button" data-action="analyze" id = "scanbut">
+                    🔍 Analyze Medical Image
+                </button>
+            </div>
+
+            <div class="chat-container"></div>
+        </div>
+
+        <div class="emergency-banner">
+            🚨 For medical emergencies, please call your local emergency services immediately.
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>

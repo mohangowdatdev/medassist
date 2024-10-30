@@ -1,0 +1,152 @@
+/* transitions.css */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.slide-down {
+    animation: slideDown 1s ease-out forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+/* Input Focus Transitions */
+.form-group input {
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.1);
+}
+
+/* Button Hover Animation */
+.signup-button {
+    transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.2);
+}
+
+/* Feature Icon Hover Animation */
+.feature-icon {
+    transition: all 0.3s ease;
+}
+
+.features-list li:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Links Hover Animation */
+.terms-link,
+.login-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.terms-link::after,
+.login-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.terms-link:hover::after,
+.login-link:hover::after {
+    width: 100%;
+}
+
+/* Password Toggle Button Animation */
+.password-toggle {
+    transition: all 0.3s ease;
+}
+
+.password-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Checkbox Animation */
+.terms-checkbox input[type="checkbox"] {
+    transition: all 0.3s ease;
+}
+
+.terms-checkbox input[type="checkbox"]:checked {
+    transform: scale(1.1);
+}
